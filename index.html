@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Include Font Awesome CSS (you may need to download and host the CSS file locally) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Notes</h1>
+            <button id="themeToggle" class="theme-toggle">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+        <div class="input-container">
+          <input type="text" id="noteInput" placeholder="Add a new note" onkeydown="addNoteOnEnter(event)" wrap="soft">
+
+            <button id="addNote">Add</button>
+        </div>
+        <div id="notesList"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

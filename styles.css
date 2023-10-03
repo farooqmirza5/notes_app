@@ -1,0 +1,170 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    color: #333; /* Default text color */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
+    color: #333; /* Default text color */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 24px;
+}
+
+/* Add styles for the theme toggle button and icons */
+.theme-toggle {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #777;
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+
+.theme-toggle i {
+    transition: transform 0.3s ease-in-out;
+}
+
+.dark-mode .theme-toggle i:nth-child(1) {
+    transform: scale(0);
+}
+
+.dark-mode .theme-toggle i:nth-child(2) {
+    transform: scale(1);
+    color: #f1c40f; /* Yellow color for moon icon in dark mode */
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+    background-color: transparent; /* Added */
+}
+
+input[type="text"] {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    outline: none;
+    background-color: transparent;
+    transition: background-color 0.3s, color 0.3s;
+    color: #333; /* Default text color */
+}
+
+button#addNote {
+    background-color: #5fba7d;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Add styles for the edit button */
+.note {
+    display: flex;
+    justify-content: space-between; /* Align buttons to the right */
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+    margin: 8px 0;
+    position: relative;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.note p {
+    flex: 1;
+    margin: 0;
+  text-transform: capitalize;
+}
+
+.note .edit {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 5px; /* Margin to separate edit and delete buttons */
+}
+
+/* Add styles for the edit note input field */
+.note .edit-note {
+    display: none;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px;
+    margin-top: 5px;
+    font-size: 16px;
+}
+
+/* Style for the delete button */
+.note .delete {
+    background-color: #e74c3c; /* Red color */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-right: 5px; /* Margin to separate delete and edit buttons */
+}
+
+/* Add more styles for dark theme as needed */
+.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode input[type="text"],
+.dark-mode .note,
+.dark-mode .header,
+.dark-mode .container {
+    background-color: #222;
+    color: #fff;
+}
+
+/* Make the "Add" button green in dark mode */
+.dark-mode button#addNote {
+    background-color: #5fba7d;
+    color: #fff;
+}
+
+.dark-mode ul#notesList {
+    background-color: #111;
+    border-color: #444;
+}
+
+/* Add more dark mode
